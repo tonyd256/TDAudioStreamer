@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA64D324183A764D00842F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D323183A764D00842F02 /* Foundation.framework */; };
+		EA64D326183A764D00842F02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D325183A764D00842F02 /* CoreGraphics.framework */; };
+		EA64D328183A764D00842F02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D327183A764D00842F02 /* UIKit.framework */; };
+		EA64D32E183A764D00842F02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA64D32C183A764D00842F02 /* InfoPlist.strings */; };
+		EA64D330183A764D00842F02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D32F183A764D00842F02 /* main.m */; };
+		EA64D334183A764D00842F02 /* TDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D333183A764D00842F02 /* TDAppDelegate.m */; };
+		EA64D337183A764D00842F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA64D335183A764D00842F02 /* Main.storyboard */; };
+		EA64D33C183A764D00842F02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA64D33B183A764D00842F02 /* Images.xcassets */; };
+		EA64D343183A764D00842F02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D342183A764D00842F02 /* XCTest.framework */; };
+		EA64D344183A764D00842F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D323183A764D00842F02 /* Foundation.framework */; };
+		EA64D345183A764D00842F02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D327183A764D00842F02 /* UIKit.framework */; };
+		EA64D34D183A764D00842F02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA64D34B183A764D00842F02 /* InfoPlist.strings */; };
+		EA64D34F183A764D00842F02 /* TDAudioStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D34E183A764D00842F02 /* TDAudioStreamerTests.m */; };
+		EA64D36E183A780600842F02 /* TDAudioFileStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D35B183A780600842F02 /* TDAudioFileStream.m */; };
+		EA64D36F183A780600842F02 /* TDAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D35D183A780600842F02 /* TDAudioQueue.m */; };
+		EA64D370183A780600842F02 /* TDAudioQueueBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D35F183A780600842F02 /* TDAudioQueueBuffer.m */; };
+		EA64D371183A780600842F02 /* TDAudioQueueBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D361183A780600842F02 /* TDAudioQueueBufferManager.m */; };
+		EA64D372183A780600842F02 /* TDAudioQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D363183A780600842F02 /* TDAudioQueueController.m */; };
+		EA64D373183A780600842F02 /* TDAudioQueueFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D365183A780600842F02 /* TDAudioQueueFiller.m */; };
+		EA64D374183A780600842F02 /* TDAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D367183A780600842F02 /* TDAudioStream.m */; };
+		EA64D375183A780600842F02 /* TDAudioInputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D369183A780600842F02 /* TDAudioInputStreamer.m */; };
+		EA64D376183A780600842F02 /* TDAudioOutputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D36B183A780600842F02 /* TDAudioOutputStreamer.m */; };
+		EA64D377183A780600842F02 /* TDAudioStreamerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D36D183A780600842F02 /* TDAudioStreamerConstants.m */; };
+		EA64D382183A781300842F02 /* TDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37A183A781300842F02 /* TDSession.m */; };
+		EA64D383183A781300842F02 /* TDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37D183A781300842F02 /* TDMasterViewController.m */; };
+		EA64D384183A781300842F02 /* TDMultipeerGuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */; };
+		EA64D385183A781300842F02 /* TDMultipeerHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D381183A781300842F02 /* TDMultipeerHostViewController.m */; };
+		EA64D387183A78D200842F02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D386183A78D200842F02 /* AVFoundation.framework */; };
+		EA64D389183A78D800842F02 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D388183A78D800842F02 /* MultipeerConnectivity.framework */; };
+		EA64D38D183A790600842F02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D38A183A790600842F02 /* AudioToolbox.framework */; };
+		EA64D38F183A790600842F02 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D38C183A790600842F02 /* MediaPlayer.framework */; };
+		EA64D392183A7ABF00842F02 /* TDAudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D391183A7ABF00842F02 /* TDAudioStreamer.m */; };
+		EA64D396183A8FDC00842F02 /* NSMutableArray+QueueMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D395183A8FDC00842F02 /* NSMutableArray+QueueMethods.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA64D346183A764D00842F02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA64D318183A764D00842F02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA64D31F183A764D00842F02;
+			remoteInfo = TDAudioStreamer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA64D320183A764D00842F02 /* TDAudioStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDAudioStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA64D323183A764D00842F02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA64D325183A764D00842F02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA64D327183A764D00842F02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA64D32B183A764D00842F02 /* TDAudioStreamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TDAudioStreamer-Info.plist"; sourceTree = "<group>"; };
+		EA64D32D183A764D00842F02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA64D32F183A764D00842F02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA64D331183A764D00842F02 /* TDAudioStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDAudioStreamer-Prefix.pch"; sourceTree = "<group>"; };
+		EA64D332183A764D00842F02 /* TDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDAppDelegate.h; sourceTree = "<group>"; };
+		EA64D333183A764D00842F02 /* TDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDAppDelegate.m; sourceTree = "<group>"; };
+		EA64D336183A764D00842F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA64D33B183A764D00842F02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA64D341183A764D00842F02 /* TDAudioStreamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDAudioStreamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA64D342183A764D00842F02 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EA64D34A183A764D00842F02 /* TDAudioStreamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TDAudioStreamerTests-Info.plist"; sourceTree = "<group>"; };
+		EA64D34C183A764D00842F02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA64D34E183A764D00842F02 /* TDAudioStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamerTests.m; sourceTree = "<group>"; };
+		EA64D35A183A780600842F02 /* TDAudioFileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioFileStream.h; sourceTree = "<group>"; };
+		EA64D35B183A780600842F02 /* TDAudioFileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioFileStream.m; sourceTree = "<group>"; };
+		EA64D35C183A780600842F02 /* TDAudioQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueue.h; sourceTree = "<group>"; };
+		EA64D35D183A780600842F02 /* TDAudioQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueue.m; sourceTree = "<group>"; };
+		EA64D35E183A780600842F02 /* TDAudioQueueBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueBuffer.h; sourceTree = "<group>"; };
+		EA64D35F183A780600842F02 /* TDAudioQueueBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueBuffer.m; sourceTree = "<group>"; };
+		EA64D360183A780600842F02 /* TDAudioQueueBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueBufferManager.h; sourceTree = "<group>"; };
+		EA64D361183A780600842F02 /* TDAudioQueueBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueBufferManager.m; sourceTree = "<group>"; };
+		EA64D362183A780600842F02 /* TDAudioQueueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueController.h; sourceTree = "<group>"; };
+		EA64D363183A780600842F02 /* TDAudioQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueController.m; sourceTree = "<group>"; };
+		EA64D364183A780600842F02 /* TDAudioQueueFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioQueueFiller.h; sourceTree = "<group>"; };
+		EA64D365183A780600842F02 /* TDAudioQueueFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioQueueFiller.m; sourceTree = "<group>"; };
+		EA64D366183A780600842F02 /* TDAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStream.h; sourceTree = "<group>"; };
+		EA64D367183A780600842F02 /* TDAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStream.m; sourceTree = "<group>"; };
+		EA64D368183A780600842F02 /* TDAudioInputStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioInputStreamer.h; sourceTree = "<group>"; };
+		EA64D369183A780600842F02 /* TDAudioInputStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioInputStreamer.m; sourceTree = "<group>"; };
+		EA64D36A183A780600842F02 /* TDAudioOutputStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioOutputStreamer.h; sourceTree = "<group>"; };
+		EA64D36B183A780600842F02 /* TDAudioOutputStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioOutputStreamer.m; sourceTree = "<group>"; };
+		EA64D36C183A780600842F02 /* TDAudioStreamerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStreamerConstants.h; sourceTree = "<group>"; };
+		EA64D36D183A780600842F02 /* TDAudioStreamerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamerConstants.m; sourceTree = "<group>"; };
+		EA64D379183A781300842F02 /* TDSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSession.h; sourceTree = "<group>"; };
+		EA64D37A183A781300842F02 /* TDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSession.m; sourceTree = "<group>"; };
+		EA64D37C183A781300842F02 /* TDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMasterViewController.h; sourceTree = "<group>"; };
+		EA64D37D183A781300842F02 /* TDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMasterViewController.m; sourceTree = "<group>"; };
+		EA64D37E183A781300842F02 /* TDMultipeerGuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMultipeerGuestViewController.h; sourceTree = "<group>"; };
+		EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMultipeerGuestViewController.m; sourceTree = "<group>"; };
+		EA64D380183A781300842F02 /* TDMultipeerHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMultipeerHostViewController.h; sourceTree = "<group>"; };
+		EA64D381183A781300842F02 /* TDMultipeerHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMultipeerHostViewController.m; sourceTree = "<group>"; };
+		EA64D386183A78D200842F02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EA64D388183A78D800842F02 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		EA64D38A183A790600842F02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EA64D38B183A790600842F02 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		EA64D38C183A790600842F02 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EA64D390183A7ABF00842F02 /* TDAudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDAudioStreamer.h; sourceTree = "<group>"; };
+		EA64D391183A7ABF00842F02 /* TDAudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamer.m; sourceTree = "<group>"; };
+		EA64D394183A8FDC00842F02 /* NSMutableArray+QueueMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueMethods.h"; sourceTree = "<group>"; };
+		EA64D395183A8FDC00842F02 /* NSMutableArray+QueueMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueMethods.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA64D31D183A764D00842F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D38D183A790600842F02 /* AudioToolbox.framework in Frameworks */,
+				EA64D38F183A790600842F02 /* MediaPlayer.framework in Frameworks */,
+				EA64D389183A78D800842F02 /* MultipeerConnectivity.framework in Frameworks */,
+				EA64D387183A78D200842F02 /* AVFoundation.framework in Frameworks */,
+				EA64D326183A764D00842F02 /* CoreGraphics.framework in Frameworks */,
+				EA64D328183A764D00842F02 /* UIKit.framework in Frameworks */,
+				EA64D324183A764D00842F02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA64D33E183A764D00842F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D343183A764D00842F02 /* XCTest.framework in Frameworks */,
+				EA64D345183A764D00842F02 /* UIKit.framework in Frameworks */,
+				EA64D344183A764D00842F02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA64D317183A764D00842F02 = {
+			isa = PBXGroup;
+			children = (
+				EA64D329183A764D00842F02 /* TDAudioStreamer */,
+				EA64D348183A764D00842F02 /* TDAudioStreamerTests */,
+				EA64D322183A764D00842F02 /* Frameworks */,
+				EA64D321183A764D00842F02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA64D321183A764D00842F02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D320183A764D00842F02 /* TDAudioStreamer.app */,
+				EA64D341183A764D00842F02 /* TDAudioStreamerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA64D322183A764D00842F02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D38A183A790600842F02 /* AudioToolbox.framework */,
+				EA64D38B183A790600842F02 /* CoreAudio.framework */,
+				EA64D38C183A790600842F02 /* MediaPlayer.framework */,
+				EA64D388183A78D800842F02 /* MultipeerConnectivity.framework */,
+				EA64D386183A78D200842F02 /* AVFoundation.framework */,
+				EA64D323183A764D00842F02 /* Foundation.framework */,
+				EA64D325183A764D00842F02 /* CoreGraphics.framework */,
+				EA64D327183A764D00842F02 /* UIKit.framework */,
+				EA64D342183A764D00842F02 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA64D329183A764D00842F02 /* TDAudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D358183A780600842F02 /* AudioStreamer */,
+				EA64D378183A781300842F02 /* Classes */,
+				EA64D37B183A781300842F02 /* Views */,
+				EA64D332183A764D00842F02 /* TDAppDelegate.h */,
+				EA64D333183A764D00842F02 /* TDAppDelegate.m */,
+				EA64D335183A764D00842F02 /* Main.storyboard */,
+				EA64D33B183A764D00842F02 /* Images.xcassets */,
+				EA64D32A183A764D00842F02 /* Supporting Files */,
+			);
+			path = TDAudioStreamer;
+			sourceTree = "<group>";
+		};
+		EA64D32A183A764D00842F02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D32B183A764D00842F02 /* TDAudioStreamer-Info.plist */,
+				EA64D32C183A764D00842F02 /* InfoPlist.strings */,
+				EA64D32F183A764D00842F02 /* main.m */,
+				EA64D331183A764D00842F02 /* TDAudioStreamer-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA64D348183A764D00842F02 /* TDAudioStreamerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D34E183A764D00842F02 /* TDAudioStreamerTests.m */,
+				EA64D349183A764D00842F02 /* Supporting Files */,
+			);
+			path = TDAudioStreamerTests;
+			sourceTree = "<group>";
+		};
+		EA64D349183A764D00842F02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D34A183A764D00842F02 /* TDAudioStreamerTests-Info.plist */,
+				EA64D34B183A764D00842F02 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA64D358183A780600842F02 /* AudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D393183A8FDC00842F02 /* Categories */,
+				EA64D359183A780600842F02 /* Classes */,
+				EA64D368183A780600842F02 /* TDAudioInputStreamer.h */,
+				EA64D369183A780600842F02 /* TDAudioInputStreamer.m */,
+				EA64D36A183A780600842F02 /* TDAudioOutputStreamer.h */,
+				EA64D36B183A780600842F02 /* TDAudioOutputStreamer.m */,
+				EA64D36C183A780600842F02 /* TDAudioStreamerConstants.h */,
+				EA64D36D183A780600842F02 /* TDAudioStreamerConstants.m */,
+				EA64D390183A7ABF00842F02 /* TDAudioStreamer.h */,
+				EA64D391183A7ABF00842F02 /* TDAudioStreamer.m */,
+			);
+			path = AudioStreamer;
+			sourceTree = "<group>";
+		};
+		EA64D359183A780600842F02 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D35A183A780600842F02 /* TDAudioFileStream.h */,
+				EA64D35B183A780600842F02 /* TDAudioFileStream.m */,
+				EA64D35C183A780600842F02 /* TDAudioQueue.h */,
+				EA64D35D183A780600842F02 /* TDAudioQueue.m */,
+				EA64D35E183A780600842F02 /* TDAudioQueueBuffer.h */,
+				EA64D35F183A780600842F02 /* TDAudioQueueBuffer.m */,
+				EA64D360183A780600842F02 /* TDAudioQueueBufferManager.h */,
+				EA64D361183A780600842F02 /* TDAudioQueueBufferManager.m */,
+				EA64D362183A780600842F02 /* TDAudioQueueController.h */,
+				EA64D363183A780600842F02 /* TDAudioQueueController.m */,
+				EA64D364183A780600842F02 /* TDAudioQueueFiller.h */,
+				EA64D365183A780600842F02 /* TDAudioQueueFiller.m */,
+				EA64D366183A780600842F02 /* TDAudioStream.h */,
+				EA64D367183A780600842F02 /* TDAudioStream.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EA64D378183A781300842F02 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D379183A781300842F02 /* TDSession.h */,
+				EA64D37A183A781300842F02 /* TDSession.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EA64D37B183A781300842F02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D37C183A781300842F02 /* TDMasterViewController.h */,
+				EA64D37D183A781300842F02 /* TDMasterViewController.m */,
+				EA64D37E183A781300842F02 /* TDMultipeerGuestViewController.h */,
+				EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */,
+				EA64D380183A781300842F02 /* TDMultipeerHostViewController.h */,
+				EA64D381183A781300842F02 /* TDMultipeerHostViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA64D393183A8FDC00842F02 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EA64D394183A8FDC00842F02 /* NSMutableArray+QueueMethods.h */,
+				EA64D395183A8FDC00842F02 /* NSMutableArray+QueueMethods.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA64D31F183A764D00842F02 /* TDAudioStreamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA64D352183A764D00842F02 /* Build configuration list for PBXNativeTarget "TDAudioStreamer" */;
+			buildPhases = (
+				EA64D31C183A764D00842F02 /* Sources */,
+				EA64D31D183A764D00842F02 /* Frameworks */,
+				EA64D31E183A764D00842F02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDAudioStreamer;
+			productName = TDAudioStreamer;
+			productReference = EA64D320183A764D00842F02 /* TDAudioStreamer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA64D340183A764D00842F02 /* TDAudioStreamerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA64D355183A764D00842F02 /* Build configuration list for PBXNativeTarget "TDAudioStreamerTests" */;
+			buildPhases = (
+				EA64D33D183A764D00842F02 /* Sources */,
+				EA64D33E183A764D00842F02 /* Frameworks */,
+				EA64D33F183A764D00842F02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA64D347183A764D00842F02 /* PBXTargetDependency */,
+			);
+			name = TDAudioStreamerTests;
+			productName = TDAudioStreamerTests;
+			productReference = EA64D341183A764D00842F02 /* TDAudioStreamerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA64D318183A764D00842F02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Tony DiPasquale";
+				TargetAttributes = {
+					EA64D31F183A764D00842F02 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					EA64D340183A764D00842F02 = {
+						TestTargetID = EA64D31F183A764D00842F02;
+					};
+				};
+			};
+			buildConfigurationList = EA64D31B183A764D00842F02 /* Build configuration list for PBXProject "TDAudioStreamer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA64D317183A764D00842F02;
+			productRefGroup = EA64D321183A764D00842F02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA64D31F183A764D00842F02 /* TDAudioStreamer */,
+				EA64D340183A764D00842F02 /* TDAudioStreamerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA64D31E183A764D00842F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D33C183A764D00842F02 /* Images.xcassets in Resources */,
+				EA64D32E183A764D00842F02 /* InfoPlist.strings in Resources */,
+				EA64D337183A764D00842F02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA64D33F183A764D00842F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D34D183A764D00842F02 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA64D31C183A764D00842F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D383183A781300842F02 /* TDMasterViewController.m in Sources */,
+				EA64D36F183A780600842F02 /* TDAudioQueue.m in Sources */,
+				EA64D370183A780600842F02 /* TDAudioQueueBuffer.m in Sources */,
+				EA64D372183A780600842F02 /* TDAudioQueueController.m in Sources */,
+				EA64D334183A764D00842F02 /* TDAppDelegate.m in Sources */,
+				EA64D375183A780600842F02 /* TDAudioInputStreamer.m in Sources */,
+				EA64D396183A8FDC00842F02 /* NSMutableArray+QueueMethods.m in Sources */,
+				EA64D385183A781300842F02 /* TDMultipeerHostViewController.m in Sources */,
+				EA64D373183A780600842F02 /* TDAudioQueueFiller.m in Sources */,
+				EA64D330183A764D00842F02 /* main.m in Sources */,
+				EA64D371183A780600842F02 /* TDAudioQueueBufferManager.m in Sources */,
+				EA64D382183A781300842F02 /* TDSession.m in Sources */,
+				EA64D376183A780600842F02 /* TDAudioOutputStreamer.m in Sources */,
+				EA64D384183A781300842F02 /* TDMultipeerGuestViewController.m in Sources */,
+				EA64D392183A7ABF00842F02 /* TDAudioStreamer.m in Sources */,
+				EA64D36E183A780600842F02 /* TDAudioFileStream.m in Sources */,
+				EA64D374183A780600842F02 /* TDAudioStream.m in Sources */,
+				EA64D377183A780600842F02 /* TDAudioStreamerConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA64D33D183A764D00842F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64D34F183A764D00842F02 /* TDAudioStreamerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA64D347183A764D00842F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA64D31F183A764D00842F02 /* TDAudioStreamer */;
+			targetProxy = EA64D346183A764D00842F02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA64D32C183A764D00842F02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA64D32D183A764D00842F02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA64D335183A764D00842F02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA64D336183A764D00842F02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA64D34B183A764D00842F02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA64D34C183A764D00842F02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA64D350183A764D00842F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA64D351183A764D00842F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA64D353183A764D00842F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDAudioStreamer/Supporting Files/TDAudioStreamer-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TDAudioStreamer/Supporting Files/TDAudioStreamer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA64D354183A764D00842F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDAudioStreamer/Supporting Files/TDAudioStreamer-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TDAudioStreamer/Supporting Files/TDAudioStreamer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA64D356183A764D00842F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TDAudioStreamer.app/TDAudioStreamer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDAudioStreamer/TDAudioStreamer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TDAudioStreamerTests/TDAudioStreamerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EA64D357183A764D00842F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TDAudioStreamer.app/TDAudioStreamer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TDAudioStreamer/TDAudioStreamer-Prefix.pch";
+				INFOPLIST_FILE = "TDAudioStreamerTests/TDAudioStreamerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA64D31B183A764D00842F02 /* Build configuration list for PBXProject "TDAudioStreamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA64D350183A764D00842F02 /* Debug */,
+				EA64D351183A764D00842F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA64D352183A764D00842F02 /* Build configuration list for PBXNativeTarget "TDAudioStreamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA64D353183A764D00842F02 /* Debug */,
+				EA64D354183A764D00842F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA64D355183A764D00842F02 /* Build configuration list for PBXNativeTarget "TDAudioStreamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA64D356183A764D00842F02 /* Debug */,
+				EA64D357183A764D00842F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA64D318183A764D00842F02 /* Project object */;
+}
