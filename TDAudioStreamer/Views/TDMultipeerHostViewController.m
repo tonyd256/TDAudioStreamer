@@ -6,19 +6,24 @@
 //  Copyright (c) 2013 Tony DiPasquale. The MIT License (MIT).
 //
 
-#import <MediaPlayer/MediaPlayer.h>
-#import <MultipeerConnectivity/MultipeerConnectivity.h>
+@import MediaPlayer;
+@import MultipeerConnectivity;
+@import AVFoundation;
 
 #import "TDMultipeerHostViewController.h"
 #import "TDAudioStreamer.h"
 #import "TDSession.h"
 
-@interface TDMultipeerHostViewController () <MPMediaPickerControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TDMultipeerHostViewController () <MPMediaPickerControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *songs;
+@property (weak, nonatomic) IBOutlet UIImageView *albumImage;
+@property (weak, nonatomic) IBOutlet UILabel *songTitle;
+@property (weak, nonatomic) IBOutlet UILabel *songArtist;
+
+@property (strong, nonatomic) MPMediaItem *song;
 @property (strong, nonatomic) TDAudioOutputStreamer *outputStreamer;
 @property (strong, nonatomic) TDSession *session;
+@property (strong, nonatomic) AVPlayer *player;
 
 @end
 
@@ -27,47 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.songs = [NSMutableArray array];
 	self.session = [[TDSession alloc] initWithPeerDisplayName:@"Host"];
-}
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.songs.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"TrackCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-
-    MPMediaItem *item = self.songs[indexPath.row];
-    cell.textLabel.text = [item valueForProperty:MPMediaItemPropertyTitle];
-    cell.detailTextLabel.text = [item valueForProperty:MPMediaItemPropertyArtist];
-
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    MPMediaItem *item = self.songs[indexPath.row];
-
-    NSArray *peers = [self.session connectedPeers];
-
-    for (MCPeerID *peer in peers) {
-        if ([peer.displayName isEqualToString:@"Guest"]) {
-            if (!self.outputStreamer)
-                self.outputStreamer = [[TDAudioOutputStreamer alloc] initWithOutputStream:[self.session outputStreamForPeer:peer]];
-
-            [self.outputStreamer streamAudioFromURL:[item valueForProperty:MPMediaItemPropertyAssetURL]];
-            [self.outputStreamer start];
-            break;
-        }
-    }
 }
 
 #pragma mark - Media Picker delegate
@@ -75,8 +40,37 @@
 - (void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.songs addObjectsFromArray:mediaItemCollection.items];
-    [self.tableView reloadData];
+
+    if (self.outputStreamer) return;
+
+    self.song = mediaItemCollection.items[0];
+
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    info[@"title"] = [self.song valueForProperty:MPMediaItemPropertyTitle] ? [self.song valueForProperty:MPMediaItemPropertyTitle] : @"";
+    info[@"artist"] = [self.song valueForProperty:MPMediaItemPropertyArtist] ? [self.song valueForProperty:MPMediaItemPropertyArtist] : @"";
+
+    MPMediaItemArtwork *artwork = [self.song valueForProperty:MPMediaItemPropertyArtwork];
+    UIImage *image = [artwork imageWithSize:self.albumImage.frame.size];
+    if (image)
+        info[@"artwork"] = image;
+
+    if (info[@"artwork"])
+        self.albumImage.image = info[@"artwork"];
+    else
+        self.albumImage.image = nil;
+
+    self.songTitle.text = info[@"title"];
+    self.songArtist.text = info[@"artist"];
+
+    [self.session sendData:[NSKeyedArchiver archivedDataWithRootObject:[info copy]]];
+
+    NSArray *peers = [self.session connectedPeers];
+
+    if (peers.count) {
+        self.outputStreamer = [[TDAudioOutputStreamer alloc] initWithOutputStream:[self.session outputStreamForPeer:peers[0]]];
+        [self.outputStreamer streamAudioFromURL:[self.song valueForProperty:MPMediaItemPropertyAssetURL]];
+        [self.outputStreamer start];
+    }
 }
 
 - (void)mediaPickerDidCancel:(MPMediaPickerController *)mediaPicker
@@ -95,7 +89,6 @@
 {
     MPMediaPickerController *picker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
     picker.delegate = self;
-    picker.allowsPickingMultipleItems = YES;
     [self presentViewController:picker animated:YES completion:nil];
 }
 

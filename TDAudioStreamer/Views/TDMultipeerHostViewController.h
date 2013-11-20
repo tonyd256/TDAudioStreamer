@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Tony DiPasquale. The MIT License (MIT).
 //
 
-#import <UIKit/UIKit.h>
-
 @interface TDMultipeerHostViewController : UIViewController
 
 @end

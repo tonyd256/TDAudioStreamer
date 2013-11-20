@@ -60,7 +60,6 @@
     }
 
     self.audioStreamerThread = [[NSThread alloc] initWithTarget:self selector:@selector(run) object:nil];
-    [self.audioStreamerThread setName:@"TDAudioInputStreamerThread"];
     [self.audioStreamerThread start];
 }
 
@@ -183,6 +182,11 @@
 }
 
 - (void)stop
+{
+    [self performSelector:@selector(stopThread) onThread:self.audioStreamerThread withObject:nil waitUntilDone:YES];
+}
+
+- (void)stopThread
 {
     self.isPlaying = NO;
     [self.audioQueue stop];

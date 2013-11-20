@@ -16,5 +16,6 @@
 
 - (void)streamAudioFromURL:(NSURL *)url;
 - (void)start;
+- (void)stop;
 
 @end

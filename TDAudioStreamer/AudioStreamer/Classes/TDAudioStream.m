@@ -77,11 +77,17 @@
     return (UInt32)[(NSOutputStream *)self.stream write:data maxLength:maxLength];
 }
 
-- (void)dealloc
+- (void)close
 {
     [self.stream close];
     self.stream.delegate = nil;
     [self.stream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
+- (void)dealloc
+{
+    if (self.stream)
+        [self close];
 }
 
 @end

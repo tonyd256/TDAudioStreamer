@@ -12,6 +12,7 @@
 @protocol TDSessionDelegate <NSObject>
 
 - (void)session:(TDSession *)session didReceiveAudioStream:(NSInputStream *)stream;
+- (void)session:(TDSession *)session didReceiveData:(NSData *)data;
 
 @end
 
@@ -22,10 +23,12 @@
 - (instancetype)initWithPeerDisplayName:(NSString *)name;
 
 - (void)startAdvertisingForServiceType:(NSString *)type discoveryInfo:(NSDictionary *)info;
+- (void)stopAdvertising;
 - (MCBrowserViewController *)browserViewControllerForSeriviceType:(NSString *)type;
 
 - (NSArray *)connectedPeers;
-- (NSArray *)openOutputStreams;
 - (NSOutputStream *)outputStreamForPeer:(MCPeerID *)peer;
+
+- (void)sendData:(NSData *)data;
 
 @end

@@ -31,7 +31,6 @@
 		EA64D376183A780600842F02 /* TDAudioOutputStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D36B183A780600842F02 /* TDAudioOutputStreamer.m */; };
 		EA64D377183A780600842F02 /* TDAudioStreamerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D36D183A780600842F02 /* TDAudioStreamerConstants.m */; };
 		EA64D382183A781300842F02 /* TDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37A183A781300842F02 /* TDSession.m */; };
-		EA64D383183A781300842F02 /* TDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37D183A781300842F02 /* TDMasterViewController.m */; };
 		EA64D384183A781300842F02 /* TDMultipeerGuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */; };
 		EA64D385183A781300842F02 /* TDMultipeerHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64D381183A781300842F02 /* TDMultipeerHostViewController.m */; };
 		EA64D387183A78D200842F02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA64D386183A78D200842F02 /* AVFoundation.framework */; };
@@ -92,8 +91,6 @@
 		EA64D36D183A780600842F02 /* TDAudioStreamerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDAudioStreamerConstants.m; sourceTree = "<group>"; };
 		EA64D379183A781300842F02 /* TDSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSession.h; sourceTree = "<group>"; };
 		EA64D37A183A781300842F02 /* TDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSession.m; sourceTree = "<group>"; };
-		EA64D37C183A781300842F02 /* TDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMasterViewController.h; sourceTree = "<group>"; };
-		EA64D37D183A781300842F02 /* TDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMasterViewController.m; sourceTree = "<group>"; };
 		EA64D37E183A781300842F02 /* TDMultipeerGuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMultipeerGuestViewController.h; sourceTree = "<group>"; };
 		EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMultipeerGuestViewController.m; sourceTree = "<group>"; };
 		EA64D380183A781300842F02 /* TDMultipeerHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMultipeerHostViewController.h; sourceTree = "<group>"; };
@@ -266,8 +263,6 @@
 		EA64D37B183A781300842F02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA64D37C183A781300842F02 /* TDMasterViewController.h */,
-				EA64D37D183A781300842F02 /* TDMasterViewController.m */,
 				EA64D37E183A781300842F02 /* TDMultipeerGuestViewController.h */,
 				EA64D37F183A781300842F02 /* TDMultipeerGuestViewController.m */,
 				EA64D380183A781300842F02 /* TDMultipeerHostViewController.h */,
@@ -390,7 +385,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA64D383183A781300842F02 /* TDMasterViewController.m in Sources */,
 				EA64D36F183A780600842F02 /* TDAudioQueue.m in Sources */,
 				EA64D370183A780600842F02 /* TDAudioQueueBuffer.m in Sources */,
 				EA64D372183A780600842F02 /* TDAudioQueueController.m in Sources */,

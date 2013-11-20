@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Tony DiPasquale. The MIT License (MIT).
 //
 
-#import <MultipeerConnectivity/MultipeerConnectivity.h>
+@import MultipeerConnectivity;
+
 #import "TDSession.h"
 
 @interface TDSession () <MCSessionDelegate, MCBrowserViewControllerDelegate>
@@ -14,7 +15,6 @@
 @property (strong, nonatomic) MCSession *session;
 @property (strong, nonatomic) MCAdvertiserAssistant *advertiser;
 @property (strong, nonatomic) MCPeerID *peerID;
-@property (strong, nonatomic) NSOutputStream *output;
 
 @end
 
@@ -56,10 +56,7 @@
 
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
-    //    NSString *title =[NSString stringWithFormat:@"Message from %@", peerID.displayName];
-    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-    NSLog(@"Message: %@ --- from %@", message, peerID.displayName);
+    [self.delegate session:self didReceiveData:data];
 }
 
 - (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID
@@ -84,22 +81,25 @@
     return [self.session connectedPeers];
 }
 
-- (NSArray *)openOutputStreams
-{
-    if ([self.session connectedPeers].count == 0) return nil;
-
-    NSMutableArray *outputs = [NSMutableArray array];
-
-    for (MCPeerID *peer in [self.session connectedPeers]) {
-        [outputs addObject:[self.session startStreamWithName:@"music" toPeer:peer error:nil]];
-    }
-
-    return [outputs copy];
-}
-
 - (NSOutputStream *)outputStreamForPeer:(MCPeerID *)peer
 {
-    return [self.session startStreamWithName:@"music" toPeer:peer error:nil];
+    NSError *error;
+    NSOutputStream *stream = [self.session startStreamWithName:@"music" toPeer:peer error:&error];
+
+    if (error) {
+        NSLog(@"Error: %@", [error userInfo].description);
+    }
+
+    return stream;
+}
+
+- (void)sendData:(NSData *)data
+{
+    NSError *error;
+    [self.session sendData:data toPeers:self.session.connectedPeers withMode:MCSessionSendDataReliable error:&error];
+    if (error) {
+        NSLog(@"Error: %@", error.userInfo.description);
+    }
 }
 
 #pragma mark - MCBrowserViewController delegate
@@ -129,6 +129,11 @@
         self.advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:type discoveryInfo:info session:self.session];
 
     [self.advertiser start];
+}
+
+- (void)stopAdvertising
+{
+    [self.advertiser stop];
 }
 
 @end
